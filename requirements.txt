@@ -1,0 +1,8 @@
+# Core dependencies for Streamlit app
+streamlit>=1.29.0
+pandas>=2.0.0
+plotly>=6.3.0
+openpyxl>=3.1.2
+
+# Additional dependencies for data processing
+numpy>=1.24.0
