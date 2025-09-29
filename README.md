@@ -151,6 +151,31 @@ Ringkasan dalam format tabel untuk analisis kuantitatif.
 - **Klasifikasi Eselon**: Jika data belum ada kolom eselon, gunakan `klasifikasi_eselon.py` terlebih dahulu
 - **Validasi Hasil**: Periksa hasil klasifikasi eselon sebelum menggunakan di aplikasi utama
 
+## 🌐 Deployment vs Local Development
+
+### ✅ **Deployed Version (Recommended)**
+
+- **Hovertemplate**: Menampilkan jumlah dengan sempurna
+- **Texttemplate**: Nilai muncul langsung di treemap
+- **Performance**: Optimal dengan data besar
+- **Compatibility**: Semua fitur berjalan dengan baik
+
+### ⚠️ **Local Development**
+
+- **Hovertemplate**: Mungkin tidak menampilkan jumlah (tergantung versi plotly)
+- **Texttemplate**: Mungkin tidak muncul di treemap
+- **Workaround**: Gunakan tabel detail di bawah treemap untuk melihat jumlah
+- **Solution**: Deploy aplikasi langsung
+
+### 🔧 **Troubleshooting Local Issues**
+
+Jika di local tidak menampilkan jumlah:
+
+1. **Gunakan tabel detail** - Buka expander "Lihat Data Detail" di bawah setiap treemap
+2. **Update dependencies** - Jalankan `pip install --upgrade plotly streamlit`
+3. **Clear browser cache** - Hard refresh (Ctrl+F5)
+4. **Restart aplikasi** - Stop dan jalankan ulang `streamlit run app.py`
+
 ## 🐛 Troubleshooting
 
 **Error "Kolom tidak ditemukan":**
@@ -167,6 +192,12 @@ Ringkasan dalam format tabel untuk analisis kuantitatif.
 
 - Kurangi ukuran data dengan filter yang lebih spesifik
 - Pertimbangkan untuk membagi data menjadi file yang lebih kecil
+
+**Jumlah tidak muncul di treemap (Local):**
+
+- **Solusi 1**: Gunakan tabel detail di bawah treemap
+- **Solusi 2**: Clear browser cache dan restart aplikasi
+- **Solusi 3**: Deploy aplikasi untuk pengalaman optimal
 
 **Klasifikasi eselon tidak akurat:**
 
